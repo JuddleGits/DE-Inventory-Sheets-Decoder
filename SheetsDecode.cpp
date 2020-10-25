@@ -1,4 +1,6 @@
-#include <string>
+// Creates a simple Win32 application that runs the SheetsDecode.py script when button is pressed
+// Still a work in progress
+
 #include <windows.h>
 #include <Python.h>
 
