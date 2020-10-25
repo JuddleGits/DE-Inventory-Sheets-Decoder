@@ -1,3 +1,7 @@
+"""
+Code taken from https://learndataanalysis.org/getting-started-google-sheets-api-in-python-part-1/
+Creates a Google Sheets API service instance to connect to endpoint
+"""
 import pickle
 import os
 from google_auth_oauthlib.flow import Flow, InstalledAppFlow
