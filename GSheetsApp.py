@@ -7,20 +7,21 @@ class SheetsApp(tk.Frame):
 		super().__init__(master)
 		self.master = master
 		self.pack()
-		self.create_button()
+		self.create_widgets()
 
-	def create_button(self):
-		self.button = tk.Button(self)
-		self.button.place(relx=0.5, rely=0.5, anchor="center")
-		self.button["text"] = "Run Program"
-		self.button["command"] = self.create_service
-		self.button.pack()
+	def create_widgets(self):
+		self.text = tk.Label(self, text="DE Inventory Program", font=("Clarendon Blk BT Black", 16))
+		self.text.pack()
+		self.button = tk.Button(self, text="Run Program", height=3, command=self.create_service)
+		self.button.pack(pady=10)
+		self.quit_button = tk.Button(self, text="Quit Program", height=3, command=self.master.destroy)
+		self.quit_button.pack(side="bottom", pady=10)
 
 	def create_service(self):
 		"""
-		Can retrieve your credentials.json file from https://developers.google.com/sheets/api/quickstart/python
+		Can get credentials.json file from https://developers.google.com/sheets/api/quickstart/python
 		"""
-		CLIENT_SECRET_FILE = 'credentials.json' 
+		CLIENT_SECRET_FILE = 'credentials.json'
 		API_NAME = 'sheets'
 		API_VERSION = 'v4'
 		SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
