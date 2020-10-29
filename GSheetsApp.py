@@ -17,7 +17,10 @@ class SheetsApp(tk.Frame):
 		self.button.pack()
 
 	def create_service(self):
-		CLIENT_SECRET_FILE = 'credentials.json'
+		"""
+		Can retrieve your credentials.json file from https://developers.google.com/sheets/api/quickstart/python
+		"""
+		CLIENT_SECRET_FILE = 'credentials.json' 
 		API_NAME = 'sheets'
 		API_VERSION = 'v4'
 		SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
