@@ -36,6 +36,9 @@ class SheetsApp(tk.Frame):
         self.in_progress.pack()
         self.master.update()
 
+        """
+		Can get credentials.json file from https://developers.google.com/sheets/api/quickstart/python
+		"""
         CLIENT_SECRET_FILE = 'credentials.json'
         API_NAME = 'sheets'
         API_VERSION = 'v4'
